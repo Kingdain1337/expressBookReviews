@@ -9,6 +9,16 @@ let books = {
       8: {"author": "Jane Austen","title": "Pride and Prejudice", "reviews": {} },
       9: {"author": "Honor\u00e9 de Balzac","title": "Le P\u00e8re Goriot", "reviews": {} },
       10: {"author": "Samuel Beckett","title": "Molloy, Malone Dies, The Unnamable, the trilogy", "reviews": {} }
-}
+};
+
+async function getBooks() {
+      // Simulate a delay to mimic an asynchronous third-party call
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(books);
+        }, 1000); // 1-second delay
+      });
+};
 
 module.exports=books;
+module.exports.getBooks=getBooks;
